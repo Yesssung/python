@@ -8,6 +8,10 @@ class FourCal: # FourCal 이라는 이름의 클래스
     def add(self):
         result = self.first + self.second
         return result
+    
+    def div(self):
+        result = self.first / self.second
+        return result
 
 
 # self 자기 자신을 가르키는 매개변수
@@ -43,3 +47,11 @@ class MoreFour(FourCal): # 상속받을 클래스를 괄호 안에 넣기! -> Fo
     def pow(self):
         result = self.first ** self.second
         return result # FourCal의 메서드를 전부 사용하면서도 pow 메서드 기능 추가 가능!
+    
+# 메서드 오버라이딩
+class SafeFourCal(FourCal):  # FourCal을 상속할거구요
+    def div(self):           # 원래 FourCal 안에 있는 div 메서드를 동일한 이름으로 새로 구성하겠다 -> 메서드 오버라이딩 이때 부모클래스에서 상속받은 메서드 대신에 오버라이드 한 메서드가 호출됩니다요 오키?
+        if self.second == 0:
+            return 0
+        else:
+            return self.first / self.second
