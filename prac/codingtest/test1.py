@@ -1,3 +1,4 @@
+# 백준 파이썬 배우기 사칙연산
 # 정석 바보버전..
 class FourCal:
     def __init__(self, first, second):
