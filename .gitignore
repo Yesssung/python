@@ -1,11 +1,3 @@
-.DS_Store
-
-echo ".idea/" >> .gitignore
-git rm -r --cached .idea
-git add .gitignore
-git commit -m "Ignore .idea directory"
-
-
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
