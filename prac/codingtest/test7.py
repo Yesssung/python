@@ -21,3 +21,17 @@ print(time.strftime("%Y-%m-%d", time.localtime(time.time())))
 
 # 서울 오늘 날짜를 출력하라더니 사용 시간대가 UTC 였다.(휴))
 print(time.strftime("%Y-%m-%d", time.gmtime()))
+
+
+##
+
+# 아니 근데 이것도 아니래! 그냥 터미널에서 확인했을때는 정답과 똑같이 출력 되는데 뭐가 문제일까
+
+from datetime import datetime, timezone
+print(datetime.now(timezone.utc).strfrime("%Y-%m-%d"))
+
+## 결국 검색 찬스인데 생각보다 더 간단하게 생각해도 될 문제였던듯
+
+from datetime import datetime       # datetime import 하고
+print(str(datetime.now()))[:10]     # 오늘날짜를 문자형으로 바꾸고, 뒤에 필요없는 부분 빼야하니까 인덱싱으로 필요한 부분까지만 출력
+                                    # 만약 그냥 datetime.now()를 할 경우 초까지 출력된다. 
