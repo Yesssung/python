@@ -16,7 +16,7 @@
 # 일단 인풋 있음
 # 결과는 A 와 B에 C를 더한 값이 출력 되어야 함
 
-A, B = map(int, input().split)
+A, B = map(int, input().split())
 C = int(input())
 
 
